@@ -1,0 +1,56 @@
+/* Estilos generales del formulario */
+form {
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 20px auto; /* Centra el formulario en la página */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde alrededor del formulario */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo del formulario */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para los contenedores de los campos */
+div {
+  margin-bottom: 15px; /* Espaciado entre los campos */
+}
+
+/* Estilo para las etiquetas */
+label {
+  display: block; /* Hace que la etiqueta ocupe toda la línea */
+  margin-bottom: 5px; /* Espaciado debajo de la etiqueta */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="number"] {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde alrededor del campo */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Estilo para los inputs en foco */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007BFF; /* Cambia el color del borde al enfocarse */
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilo opcional para los botones (si decides agregar uno) */
+button {
+  background-color: #007BFF; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}

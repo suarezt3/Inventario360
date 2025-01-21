@@ -1,0 +1,35 @@
+<div>
+  <form [formGroup]="formulario" (ngSubmit)="descargarPDF()">
+    <div>
+      <label>Nombre de inventario</label>
+      <input type="text" name="nombre" formControlName="nombre" />
+    </div>
+    <div>
+      <label>Cantidad</label>
+      <input type="number" name="cantidad" formControlName="cantidad" />
+    </div>
+    <div>
+      <label>Precio</label>
+      <input type="number" name="precio" formControlName="precio" />
+    </div>
+    <div>
+      <label>Descripción</label>
+      <input type="text" name="descripcion" formControlName="descripcion" />
+    </div>
+    <div>
+      <label>Imagen</label>
+      <input type="text" name="imagen" formControlName="imagen" />
+    </div>
+    <div>
+      <label>Categoría</label>
+      <input type="text" name="categoria" formControlName="categoria" />
+    </div>
+    <div>
+      <label>Subcategoría</label>
+      <input type="text" name="subcategoria" formControlName="subcategoria" />
+    </div>
+    <div>
+      <button type="submit">Descargar PDF</button>
+    </div>
+  </form>
+</div>

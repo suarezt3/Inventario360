@@ -1,0 +1,67 @@
+
+.dashboard-layout {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif, Arial;
+}
+
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.container-name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.name-user{
+  color: #fff;
+}
+
+.rol-user{
+  color: #fff;
+  font-size: small;
+}
+
+nz-header {
+  background: #fff;
+  padding: 0;
+}
+
+nz-content {
+  margin: 0 16px;
+}
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+  height: 100%;
+  font-family: 'Poppins', sans-serif, Arial;
+}
+
+
+.btn-logout {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+nz-footer {
+  text-align: center;
+}
+
