@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { jsPDF } from "jspdf";
+import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { jsPDF } from "jspdf";
   styleUrls: ['./form-register-pc.component.css'],
   imports: [
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgZorroModule
   ]
 })
 export class FormRegisterPcComponent implements OnInit {
@@ -28,7 +30,7 @@ export class FormRegisterPcComponent implements OnInit {
     this.formulario = this.fb.group({
       id: ['Eyder Suarez',],
       date: ['100',],
-      TicketNumber: ['902',],
+      ticketNumber: ['902',],
       typeService: ['902',],
       technicalService: ['El mejor',],
       operation: ['Sin imagen',],

@@ -1,32 +1,63 @@
 <div>
   <form [formGroup]="formulario" (ngSubmit)="descargarPDF()">
     <div>
-      <label>Nombre de inventario</label>
-      <input type="text" name="nombre" formControlName="nombre" />
+      <label>ID</label>
+      <input type="text" formControlName="id" nz-input />
     </div>
     <div>
-      <label>Cantidad</label>
-      <input type="number" name="cantidad" formControlName="cantidad" />
+      <label>Fecha</label>
+      <div>
+        <nz-date-picker formControlName="date"></nz-date-picker>
+      </div>
     </div>
     <div>
-      <label>Precio</label>
-      <input type="number" name="precio" formControlName="precio" />
+      <label>Servicio</label>
+      <input type="number" formControlName="ticketNumber" nz-input />
     </div>
     <div>
-      <label>Descripción</label>
-      <input type="text" name="descripcion" formControlName="descripcion" />
+      <label>Tipo de servicio</label>
+      <div>
+        <nz-select class="" formControlName="typeService" nzPlaceHolder="Seleccione una opcion">
+            <nz-option nzValue="Asignación" nzLabel="Asignación"></nz-option>
+            <nz-option nzValue="Devolución" nzLabel="Devolución"></nz-option>
+            <nz-option nzValue="Prestamo" nzLabel="Prestamo"></nz-option>
+            <nz-option nzValue="Reasignación" nzLabel="Reasignación"></nz-option>
+        </nz-select>
+      </div>
     </div>
     <div>
-      <label>Imagen</label>
-      <input type="text" name="imagen" formControlName="imagen" />
+      <label>Servico técnico</label>
+      <input type="text" formControlName="technicalService" nz-input/>
     </div>
     <div>
-      <label>Categoría</label>
-      <input type="text" name="categoria" formControlName="categoria" />
+      <label>Operacion</label>
+      <div>
+        <nz-select class="" formControlName="operation" nzPlaceHolder="Seleccione una opcion">
+          <nz-option nzValue="BCW Group-BCW" nzLabel="BCW Group-BCW"></nz-option>
+          <nz-option nzValue="Hogart" nzLabel="Hogart"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div>
+      <label>Usuario</label>
+      <input type="text" formControlName="user" nz-input/>
+    </div>
+    <div>
+      <label>Estado</label>
+      <div>
+        <nz-select class="" formControlName="status" nzPlaceHolder="Seleccione una opcion">
+          <nz-option nzValue="Ingreso a bodega" nzLabel="Ingreso a bodega"></nz-option>
+          <nz-option nzValue="Entrega a la opcional" nzLabel="Entrega a la opcional"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div>
+      <label>host</label>
+      <input type="text" formControlName="host" nz-input/>
     </div>
     <div>
       <label>Subcategoría</label>
-      <input type="text" name="subcategoria" formControlName="subcategoria" />
+      <input type="text" formControlName="subcategoria" nz-input/>
     </div>
     <div>
       <button type="submit">Descargar PDF</button>
