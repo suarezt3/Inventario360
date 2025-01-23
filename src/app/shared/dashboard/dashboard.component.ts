@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -7,7 +8,8 @@ import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
   imports: [
-    NgZorroModule
+    NgZorroModule,
+    RouterModule,
   ]
 })
 export class DashboardComponent implements OnInit {

@@ -7,7 +7,16 @@
       <span class="rol-user">Rol</span>
       <hr>
     </div>
-    <!-- <ul nz-menu nzTheme="dark" nzMode="inline">
+
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item nzMatchRouter>
+        <span nz-icon nzType="table"></span>
+        <a [routerLink]="['/table-inventario']"> Inventario</a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <span nz-icon nzType="form"></span>
+        <a [routerLink]="['/form-register-device']"> Registrar activo</a>
+      </li>
       <li nz-submenu nzTitle="User" nzIcon="user">
         <ul>
           <li nz-menu-item>Tom</li>
@@ -21,11 +30,8 @@
           <li nz-menu-item>Team 2</li>
         </ul>
       </li>
-      <li nz-menu-item>
-        <span nz-icon nzType="file"></span>
-        <span>File</span>
-      </li>
-    </ul> -->
+
+    </ul>
   </nz-sider>
   <nz-layout class="content-layout">
     <nz-header class="header">
@@ -42,8 +48,7 @@
       </div>
     </nz-header>
       <div class="inner-content">
-        <h1>Dashboard</h1>
-        <p>Bienvenido a tu panel de control</p>
+        <router-outlet></router-outlet>
       </div>
 
     <nz-footer>Eyder Suarez ©2024 Implement By Angular</nz-footer>

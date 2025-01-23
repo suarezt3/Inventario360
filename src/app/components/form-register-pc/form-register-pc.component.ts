@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { jsPDF } from "jspdf";
 
@@ -23,16 +23,55 @@ export class FormRegisterPcComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.addDevice();
+
     this.formulario = this.fb.group({
-      nombre: ['Eyder Suarez',],
-      cantidad: ['100',],
-      precio: ['902',],
-      descripcion: ['El mejor',],
-      imagen: ['Sin imagen',],
-      categoria: ['Programador',],
-      subcategoria: ['Sistemas',],
+      id: ['Eyder Suarez',],
+      date: ['100',],
+      TicketNumber: ['902',],
+      typeService: ['902',],
+      technicalService: ['El mejor',],
+      operation: ['Sin imagen',],
+      user: ['Sistemas',],
+      status: ['Pendiente',],
+      host: ['Programador',],
+      deviceType: this.fb.array([]), // Cambiado a FormArray
+      warehouseManager: [''],
+      CCwarehouseManager: [''],
+      técnico: [''],
+      CCtecnico: [''],
     });
   }
+
+  get deviceType(): FormArray {
+    return this.formulario.get('deviceType') as FormArray;
+  }
+
+  addDevice(): void {
+    const deviceGroup = this.fb.group({
+      type: ['', Validators.required], // tipo de dispositivo
+      deviceName: ['', Validators.required], // nombre del dispositivo
+      brand: [''], // marca del dispositivo
+      model: [''], // modelo del dispositivo
+      serialNumber: [''], // número de serie
+      plate: [''], // placa del dispositivo
+      observe: [''], // observaciones
+    });
+    this.deviceType.push(deviceGroup);
+  }
+
+  removeDevice(index: number): void {
+    this.deviceType.removeAt(index);
+  }
+
+  onSubmit(): void {
+    if (this.formulario.valid) {
+      console.log(this.formulario.value);
+      // Aquí puedes manejar el envío del formulario
+    }
+  }
+
+
 
   descargarPDF() {
     const doc = new jsPDF();
@@ -52,5 +91,8 @@ export class FormRegisterPcComponent implements OnInit {
     // Resetear el formulario
     this.formulario.reset();
   }
+
+
+
 
 }

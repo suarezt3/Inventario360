@@ -1,12 +1,11 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
-import { jsPDF } from "jspdf";
+import { Component, OnInit } from '@angular/core';
+
+import { DashboardComponent } from './shared/dashboard/dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [DashboardComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 //Importaciones de modulos NG-ZORRO
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+
+
 
 
 
@@ -11,11 +15,15 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   imports: [
     CommonModule,
     NzLayoutModule,
-    NzIconModule
+    NzIconModule,
+    NzButtonModule,
+    NzMenuModule,
   ],
   exports: [
     NzLayoutModule,
-    NzIconModule
+    NzIconModule,
+    NzButtonModule,
+    NzMenuModule,
   ]
 
 })
